@@ -8,6 +8,31 @@ import ProjectCard from "../ProjectCard";
 
 import { projects } from "@/content/projects";
 
+type Project = (typeof projects)[number] & {
+  featured?: boolean;
+  technologies?: string[];
+  githubUrl?: string;
+  liveUrl?: string;
+};
+
+function isFeaturedProject(
+  project: Project,
+): project is Project & {
+  featured: NonNullable<Project["featured"]>;
+  technologies: NonNullable<Project["technologies"]>;
+  githubUrl: NonNullable<Project["githubUrl"]>;
+  liveUrl: NonNullable<Project["liveUrl"]>;
+  image: string;
+} {
+  return Boolean(
+    project.featured &&
+      project.technologies &&
+      project.githubUrl &&
+      project.liveUrl &&
+      project.image,
+  );
+}
+
 export default function Projects() {
   return (
     <Section id="projects">
@@ -32,7 +57,7 @@ export default function Projects() {
           className="grid gap-8 lg:grid-cols-3"
         >
           {projects
-            .filter((project) => project.featured)
+            .filter(isFeaturedProject)
             .map((project) => (
               <motion.div
                 key={project.id}
