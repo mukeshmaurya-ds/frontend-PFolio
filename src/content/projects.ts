@@ -9,18 +9,7 @@ export const projects: Project[] = [
       "A modern portfolio website built using Next.js, TypeScript and Tailwind CSS.",
 
     image: "/images/projects/portfolio.png",
-
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-    ],
-
-    githubUrl: "https://github.com/yourusername/portfolio",
-
-    liveUrl: "https://portfolio.vercel.app",
-
-    featured: true,
+    github: "https://github.com/yourusername/portfolio",
   },
 
   {
@@ -32,18 +21,7 @@ export const projects: Project[] = [
 
     image: "/images/projects/ecommerce.png",
 
-    technologies: [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Express",
-    ],
-
-    githubUrl: "https://github.com/yourusername/ecommerce",
-
-    liveUrl: "https://ecommerce.vercel.app",
-
-    featured: true,
+    github: "https://github.com/yourusername/ecommerce",
   },
 
   {
@@ -56,16 +34,7 @@ export const projects: Project[] = [
 
     image: "/images/projects/dashboard.png",
 
-    technologies: [
-      "Next.js",
-      "Chart.js",
-      "Tailwind CSS",
-    ],
 
-    githubUrl: "https://github.com/yourusername/dashboard",
-
-    liveUrl: "https://dashboard.vercel.app",
-
-    featured: true,
+    github: "https://github.com/yourusername/dashboard",
   },
 ];
