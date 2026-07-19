@@ -5,7 +5,6 @@ import Container from "../ui/Container";
 import Section from "../ui/Section";
 import SectionHeading from "../ui/SectionHeading";
 import ProjectCard from "../ProjectCard";
-
 import { projects } from "@/content/projects";
 
 type Project = (typeof projects)[number] & {
